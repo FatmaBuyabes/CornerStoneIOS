@@ -1,0 +1,546 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B105932D2B9D9CCA00A59C51 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B105932C2B9D9CCA00A59C51 /* AppDelegate.swift */; };
+		B105932F2B9D9CCA00A59C51 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B105932E2B9D9CCA00A59C51 /* SceneDelegate.swift */; };
+		B10593312B9D9CCA00A59C51 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10593302B9D9CCA00A59C51 /* MainViewController.swift */; };
+		B10593342B9D9CCA00A59C51 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B10593322B9D9CCA00A59C51 /* Main.storyboard */; };
+		B10593362B9D9CCC00A59C51 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B10593352B9D9CCC00A59C51 /* Assets.xcassets */; };
+		B10593392B9D9CCC00A59C51 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B10593372B9D9CCC00A59C51 /* LaunchScreen.storyboard */; };
+		B10593422B9D9CE200A59C51 /* Eureka in Frameworks */ = {isa = PBXBuildFile; productRef = B10593412B9D9CE200A59C51 /* Eureka */; };
+		B10593452B9D9CEE00A59C51 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = B10593442B9D9CEE00A59C51 /* Kingfisher */; };
+		B10593482B9D9D0200A59C51 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = B10593472B9D9D0200A59C51 /* SnapKit */; };
+		B105934A2B9D9D0200A59C51 /* SnapKit-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = B10593492B9D9D0200A59C51 /* SnapKit-Dynamic */; };
+		B105934D2B9D9D0C00A59C51 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = B105934C2B9D9D0C00A59C51 /* Alamofire */; };
+		B105934F2B9D9D0C00A59C51 /* AlamofireDynamic in Frameworks */ = {isa = PBXBuildFile; productRef = B105934E2B9D9D0C00A59C51 /* AlamofireDynamic */; };
+		B10593542B9D9D9B00A59C51 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10593532B9D9D9B00A59C51 /* User.swift */; };
+		B10593572B9DFCAB00A59C51 /* WelcomeScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10593562B9DFCAB00A59C51 /* WelcomeScreenViewController.swift */; };
+		B105935D2B9DFEDC00A59C51 /* TokenResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B105935C2B9DFEDC00A59C51 /* TokenResponse.swift */; };
+		B105935F2B9DFEFC00A59C51 /* UserDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = B105935E2B9DFEFC00A59C51 /* UserDetails.swift */; };
+		B10593612B9DFFAC00A59C51 /* GymListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10593602B9DFFAC00A59C51 /* GymListTableViewController.swift */; };
+		B10593632B9E015A00A59C51 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10593622B9E015A00A59C51 /* NetworkManager.swift */; };
+		B10593652B9E208A00A59C51 /* refreshDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10593642B9E208A00A59C51 /* refreshDelegate.swift */; };
+		B10593692B9E27A300A59C51 /* Gym.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10593682B9E27A300A59C51 /* Gym.swift */; };
+		B105936B2B9E283B00A59C51 /* BookingDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = B105936A2B9E283B00A59C51 /* BookingDetails.swift */; };
+		B164CCCC2B9E3B100011BD61 /* LoginUiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B164CCCB2B9E3B100011BD61 /* LoginUiViewController.swift */; };
+		B164CCCE2B9E3CAE0011BD61 /* SignUpUIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B164CCCD2B9E3CAE0011BD61 /* SignUpUIViewController.swift */; };
+		B164CCD02B9EFDA30011BD61 /* PolicyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B164CCCF2B9EFDA30011BD61 /* PolicyViewController.swift */; };
+		B164CCD22B9F01390011BD61 /* GymTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B164CCD12B9F01390011BD61 /* GymTableViewCell.swift */; };
+		B164CCD42B9F02920011BD61 /* BookingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B164CCD32B9F02920011BD61 /* BookingTableViewCell.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		B10593292B9D9CCA00A59C51 /* GymSeeker.1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GymSeeker.1.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B105932C2B9D9CCA00A59C51 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B105932E2B9D9CCA00A59C51 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		B10593302B9D9CCA00A59C51 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		B10593332B9D9CCA00A59C51 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B10593352B9D9CCC00A59C51 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B10593382B9D9CCC00A59C51 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B105933A2B9D9CCC00A59C51 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B10593532B9D9D9B00A59C51 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		B10593562B9DFCAB00A59C51 /* WelcomeScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeScreenViewController.swift; sourceTree = "<group>"; };
+		B105935C2B9DFEDC00A59C51 /* TokenResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenResponse.swift; sourceTree = "<group>"; };
+		B105935E2B9DFEFC00A59C51 /* UserDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetails.swift; sourceTree = "<group>"; };
+		B10593602B9DFFAC00A59C51 /* GymListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GymListTableViewController.swift; sourceTree = "<group>"; };
+		B10593622B9E015A00A59C51 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		B10593642B9E208A00A59C51 /* refreshDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = refreshDelegate.swift; sourceTree = "<group>"; };
+		B10593682B9E27A300A59C51 /* Gym.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gym.swift; sourceTree = "<group>"; };
+		B105936A2B9E283B00A59C51 /* BookingDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingDetails.swift; sourceTree = "<group>"; };
+		B164CCCB2B9E3B100011BD61 /* LoginUiViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUiViewController.swift; sourceTree = "<group>"; };
+		B164CCCD2B9E3CAE0011BD61 /* SignUpUIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpUIViewController.swift; sourceTree = "<group>"; };
+		B164CCCF2B9EFDA30011BD61 /* PolicyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PolicyViewController.swift; sourceTree = "<group>"; };
+		B164CCD12B9F01390011BD61 /* GymTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GymTableViewCell.swift; sourceTree = "<group>"; };
+		B164CCD32B9F02920011BD61 /* BookingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingTableViewCell.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B10593262B9D9CCA00A59C51 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B105934D2B9D9D0C00A59C51 /* Alamofire in Frameworks */,
+				B105934F2B9D9D0C00A59C51 /* AlamofireDynamic in Frameworks */,
+				B10593482B9D9D0200A59C51 /* SnapKit in Frameworks */,
+				B10593452B9D9CEE00A59C51 /* Kingfisher in Frameworks */,
+				B10593422B9D9CE200A59C51 /* Eureka in Frameworks */,
+				B105934A2B9D9D0200A59C51 /* SnapKit-Dynamic in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B10593202B9D9CCA00A59C51 = {
+			isa = PBXGroup;
+			children = (
+				B105932B2B9D9CCA00A59C51 /* GymSeeker.1 */,
+				B105932A2B9D9CCA00A59C51 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B105932A2B9D9CCA00A59C51 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B10593292B9D9CCA00A59C51 /* GymSeeker.1.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B105932B2B9D9CCA00A59C51 /* GymSeeker.1 */ = {
+			isa = PBXGroup;
+			children = (
+				B10593522B9D9D6D00A59C51 /* Model */,
+				B10593502B9D9D2500A59C51 /* VC */,
+				B10593512B9D9D2E00A59C51 /* Supporting */,
+				B10593552B9D9DA500A59C51 /* Network */,
+				B10593322B9D9CCA00A59C51 /* Main.storyboard */,
+				B10593352B9D9CCC00A59C51 /* Assets.xcassets */,
+				B10593372B9D9CCC00A59C51 /* LaunchScreen.storyboard */,
+				B105933A2B9D9CCC00A59C51 /* Info.plist */,
+			);
+			path = GymSeeker.1;
+			sourceTree = "<group>";
+		};
+		B10593502B9D9D2500A59C51 /* VC */ = {
+			isa = PBXGroup;
+			children = (
+				B10593302B9D9CCA00A59C51 /* MainViewController.swift */,
+				B10593562B9DFCAB00A59C51 /* WelcomeScreenViewController.swift */,
+				B10593602B9DFFAC00A59C51 /* GymListTableViewController.swift */,
+				B164CCCB2B9E3B100011BD61 /* LoginUiViewController.swift */,
+				B164CCCD2B9E3CAE0011BD61 /* SignUpUIViewController.swift */,
+				B164CCCF2B9EFDA30011BD61 /* PolicyViewController.swift */,
+				B164CCD12B9F01390011BD61 /* GymTableViewCell.swift */,
+				B164CCD32B9F02920011BD61 /* BookingTableViewCell.swift */,
+			);
+			path = VC;
+			sourceTree = "<group>";
+		};
+		B10593512B9D9D2E00A59C51 /* Supporting */ = {
+			isa = PBXGroup;
+			children = (
+				B105932C2B9D9CCA00A59C51 /* AppDelegate.swift */,
+				B105932E2B9D9CCA00A59C51 /* SceneDelegate.swift */,
+			);
+			path = Supporting;
+			sourceTree = "<group>";
+		};
+		B10593522B9D9D6D00A59C51 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B10593532B9D9D9B00A59C51 /* User.swift */,
+				B105935C2B9DFEDC00A59C51 /* TokenResponse.swift */,
+				B105935E2B9DFEFC00A59C51 /* UserDetails.swift */,
+				B10593642B9E208A00A59C51 /* refreshDelegate.swift */,
+				B10593682B9E27A300A59C51 /* Gym.swift */,
+				B105936A2B9E283B00A59C51 /* BookingDetails.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B10593552B9D9DA500A59C51 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				B10593622B9E015A00A59C51 /* NetworkManager.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B10593282B9D9CCA00A59C51 /* GymSeeker.1 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B105933D2B9D9CCC00A59C51 /* Build configuration list for PBXNativeTarget "GymSeeker.1" */;
+			buildPhases = (
+				B10593252B9D9CCA00A59C51 /* Sources */,
+				B10593262B9D9CCA00A59C51 /* Frameworks */,
+				B10593272B9D9CCA00A59C51 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GymSeeker.1;
+			packageProductDependencies = (
+				B10593412B9D9CE200A59C51 /* Eureka */,
+				B10593442B9D9CEE00A59C51 /* Kingfisher */,
+				B10593472B9D9D0200A59C51 /* SnapKit */,
+				B10593492B9D9D0200A59C51 /* SnapKit-Dynamic */,
+				B105934C2B9D9D0C00A59C51 /* Alamofire */,
+				B105934E2B9D9D0C00A59C51 /* AlamofireDynamic */,
+			);
+			productName = GymSeeker.1;
+			productReference = B10593292B9D9CCA00A59C51 /* GymSeeker.1.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B10593212B9D9CCA00A59C51 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1520;
+				LastUpgradeCheck = 1520;
+				TargetAttributes = {
+					B10593282B9D9CCA00A59C51 = {
+						CreatedOnToolsVersion = 15.2;
+					};
+				};
+			};
+			buildConfigurationList = B10593242B9D9CCA00A59C51 /* Build configuration list for PBXProject "GymSeeker.1" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B10593202B9D9CCA00A59C51;
+			packageReferences = (
+				B10593402B9D9CE200A59C51 /* XCRemoteSwiftPackageReference "Eureka" */,
+				B10593432B9D9CEE00A59C51 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				B10593462B9D9D0200A59C51 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				B105934B2B9D9D0C00A59C51 /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
+			productRefGroup = B105932A2B9D9CCA00A59C51 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B10593282B9D9CCA00A59C51 /* GymSeeker.1 */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B10593272B9D9CCA00A59C51 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B10593392B9D9CCC00A59C51 /* LaunchScreen.storyboard in Resources */,
+				B10593362B9D9CCC00A59C51 /* Assets.xcassets in Resources */,
+				B10593342B9D9CCA00A59C51 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B10593252B9D9CCA00A59C51 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B164CCCC2B9E3B100011BD61 /* LoginUiViewController.swift in Sources */,
+				B164CCD22B9F01390011BD61 /* GymTableViewCell.swift in Sources */,
+				B105935F2B9DFEFC00A59C51 /* UserDetails.swift in Sources */,
+				B164CCD02B9EFDA30011BD61 /* PolicyViewController.swift in Sources */,
+				B10593542B9D9D9B00A59C51 /* User.swift in Sources */,
+				B105936B2B9E283B00A59C51 /* BookingDetails.swift in Sources */,
+				B10593632B9E015A00A59C51 /* NetworkManager.swift in Sources */,
+				B164CCD42B9F02920011BD61 /* BookingTableViewCell.swift in Sources */,
+				B10593312B9D9CCA00A59C51 /* MainViewController.swift in Sources */,
+				B105932D2B9D9CCA00A59C51 /* AppDelegate.swift in Sources */,
+				B10593572B9DFCAB00A59C51 /* WelcomeScreenViewController.swift in Sources */,
+				B164CCCE2B9E3CAE0011BD61 /* SignUpUIViewController.swift in Sources */,
+				B10593692B9E27A300A59C51 /* Gym.swift in Sources */,
+				B105935D2B9DFEDC00A59C51 /* TokenResponse.swift in Sources */,
+				B10593612B9DFFAC00A59C51 /* GymListTableViewController.swift in Sources */,
+				B10593652B9E208A00A59C51 /* refreshDelegate.swift in Sources */,
+				B105932F2B9D9CCA00A59C51 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		B10593322B9D9CCA00A59C51 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B10593332B9D9CCA00A59C51 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		B10593372B9D9CCC00A59C51 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B10593382B9D9CCC00A59C51 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B105933B2B9D9CCC00A59C51 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		B105933C2B9D9CCC00A59C51 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B105933E2B9D9CCC00A59C51 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = GymSeeker.1/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "FatmaBuyabes.GymSeeker-1";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B105933F2B9D9CCC00A59C51 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = GymSeeker.1/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "FatmaBuyabes.GymSeeker-1";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B10593242B9D9CCA00A59C51 /* Build configuration list for PBXProject "GymSeeker.1" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B105933B2B9D9CCC00A59C51 /* Debug */,
+				B105933C2B9D9CCC00A59C51 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B105933D2B9D9CCC00A59C51 /* Build configuration list for PBXNativeTarget "GymSeeker.1" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B105933E2B9D9CCC00A59C51 /* Debug */,
+				B105933F2B9D9CCC00A59C51 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		B10593402B9D9CE200A59C51 /* XCRemoteSwiftPackageReference "Eureka" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/xmartlabs/Eureka";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.4.0;
+			};
+		};
+		B10593432B9D9CEE00A59C51 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.11.0;
+			};
+		};
+		B10593462B9D9D0200A59C51 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.7.1;
+			};
+		};
+		B105934B2B9D9D0C00A59C51 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.9.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		B10593412B9D9CE200A59C51 /* Eureka */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B10593402B9D9CE200A59C51 /* XCRemoteSwiftPackageReference "Eureka" */;
+			productName = Eureka;
+		};
+		B10593442B9D9CEE00A59C51 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B10593432B9D9CEE00A59C51 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+		B10593472B9D9D0200A59C51 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B10593462B9D9D0200A59C51 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+		B10593492B9D9D0200A59C51 /* SnapKit-Dynamic */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B10593462B9D9D0200A59C51 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = "SnapKit-Dynamic";
+		};
+		B105934C2B9D9D0C00A59C51 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B105934B2B9D9D0C00A59C51 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		B105934E2B9D9D0C00A59C51 /* AlamofireDynamic */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B105934B2B9D9D0C00A59C51 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = AlamofireDynamic;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = B10593212B9D9CCA00A59C51 /* Project object */;
+}
