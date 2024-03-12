@@ -8,7 +8,7 @@
 import UIKit
 
 class GymTableViewCell: UITableViewCell {
-
+        
     let gymNameLabel = UILabel()
     let gymLocationLabel = UILabel()
     let gymWorkingHoursLabel = UILabel()
@@ -18,9 +18,10 @@ class GymTableViewCell: UITableViewCell {
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
-        // Initialization code will go here
+//        setupViews()
+//        setupConstraints()
     }
-
+    
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
@@ -33,22 +34,54 @@ class GymTableViewCell: UITableViewCell {
         contentView.addSubview(favImage)
         
         
-//        gymName.font = .systemFont(ofSize: 16, weight: .medium)
-//        gymName.textColor = .black  // Customize as needed
-//
-//        locationLabel.font = .systemFont(ofSize: 14, weight: .regular)
-//        locationLabel.textColor = .darkGray  // Customize as needed
-//        gymImageView.contentMode = .scaleAspectFit
-
+        gymNameLabel.font = .systemFont(ofSize: 16, weight: .medium)
+        gymNameLabel.textColor = .black
         
-    }
-
-    private func setupConstraints() {
-        // Use Auto Layout or a library like SnapKit to layout the components
+        gymLocationLabel.font = .systemFont(ofSize: 14, weight: .regular)
+        gymLocationLabel.textColor = .darkGray
+        
+        gymWorkingHoursLabel.font = .systemFont(ofSize: 14, weight: .regular)
+        gymWorkingHoursLabel.textColor = .darkGray
+        
+        gymImage.contentMode = .scaleAspectFit
+        
+        favImage.contentMode = .scaleAspectFit
     }
     
-
-
-
-
+    private func setupConstraints() {
+        
+        gymImage.snp.makeConstraints { make in
+                    make.leading.equalToSuperview().offset(16)
+                    make.centerY.equalToSuperview()
+                    make.width.height.equalTo(100)
+                }
+        gymNameLabel.snp.makeConstraints { make in
+            make.leading.equalToSuperview().offset(16)  // 16 points from the leading edge of the cell
+            make.centerY.equalToSuperview()  // Vertically centered
+            make.width.height.equalTo(40)  // 40x40 points
+        }
+        
+        gymLocationLabel.snp.makeConstraints { make in
+            make.leading.equalTo(gymImage.snp.trailing).offset(16)  // 16 points from the trailing edge of the image view
+            make.top.equalToSuperview().offset(16)  // 16 points from the top edge of the cell
+            make.trailing.lessThanOrEqualToSuperview().offset(-16)  // At least 16 points from the trailing edge of the cell
+        }
+        
+        gymWorkingHoursLabel.snp.makeConstraints { make in
+            make.leading.equalTo(gymLocationLabel.snp.leading)  // Aligned with the leading edge of the account number label
+            make.top.equalTo(gymNameLabel.snp.bottom).offset(8)  // 8 points below the account number label
+            make.trailing.lessThanOrEqualToSuperview().offset(-16)  // At least 16 points from the trailing edge of the cell
+            make.bottom.lessThanOrEqualToSuperview().offset(-16)  // At least 16 points from the bottom edge of the cell
+        }
+        favImage.snp.makeConstraints { make in
+            make.leading.equalTo(gymImage.snp.trailing).offset(16)
+        }
+    }
+    
+    
+    
+    
+    
+    
+    
 }
