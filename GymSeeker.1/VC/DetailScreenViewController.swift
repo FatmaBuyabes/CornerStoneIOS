@@ -120,5 +120,3 @@ class DetailScreenViewController: UIViewController {
         print("Button tapped")
     }
 }
-
-

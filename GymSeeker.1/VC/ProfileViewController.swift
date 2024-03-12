@@ -112,35 +112,9 @@ class ProfileViewController: UIViewController {
     
     func showuserDetails(for user: User) {
         self.user = user
-        // Update UI elements with user details
+      
         setupViews()
     }
 }
 
-#if canImport(SwiftUI) && DEBUG
-struct ExampleViewControllerPreview: PreviewProvider {
-    static var previews: some View {
-        GenericViewControllerRepresentable(ProfileViewController())
-    }
-}
-#endif
 
-#if canImport(SwiftUI) && DEBUG
-import SwiftUI
-
-struct GenericViewControllerRepresentable<ViewController: UIViewController>: UIViewControllerRepresentable {
-    
-    let viewController: ViewController
-    
-    init(_ builder: @autoclosure @escaping () -> ViewController) {
-        self.viewController = builder()
-    }
-    
-    func makeUIViewController(context: Context) -> ViewController {
-        viewController
-    }
-    
-    func updateUIViewController(_ uiViewController: ViewController, context: Context) {
-    }
-}
-#endif
