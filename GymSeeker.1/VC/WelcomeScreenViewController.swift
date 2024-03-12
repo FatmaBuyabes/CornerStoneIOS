@@ -18,7 +18,7 @@ class WelcomeScreenViewController: UIViewController {
         view.backgroundColor = .white
         super.viewDidLoad()
         
-        image.image = UIImage(named: "kfh")
+        image.image = UIImage(named: "gym")
         view.addSubview(loginButton)
         view.addSubview(signupButton)
         view.addSubview(image)
@@ -72,8 +72,7 @@ class WelcomeScreenViewController: UIViewController {
             welcomeLabel.text = "Welcome !!"
             welcomeLabel.font = UIFont.boldSystemFont(ofSize: 21)
             welcomeLabel.textColor = .black
-        
-        
+    
     }
     
     
@@ -131,11 +130,6 @@ class WelcomeScreenViewController: UIViewController {
         self.navigationController?.pushViewController(signupVC, animated: true)
         
     }
-    
-
-    
-    
-
-
 
 }
+
