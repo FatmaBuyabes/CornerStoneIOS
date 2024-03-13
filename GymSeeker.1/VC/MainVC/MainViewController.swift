@@ -75,7 +75,7 @@ class MainViewController: UIViewController {
         createAccountContainerView.addSubview(createAccountButton)
 
         let signInButton = UIButton()
-        signInButton.setTitle("Sign In", for: .normal)
+        signInButton.setTitle("Log In", for: .normal)
         signInButton.setTitleColor(.white, for: .normal)
         signInButton.backgroundColor = .gray // Set background color
         signInButton.layer.cornerRadius = 9 // Optional: Add corner radius for rounded appearance

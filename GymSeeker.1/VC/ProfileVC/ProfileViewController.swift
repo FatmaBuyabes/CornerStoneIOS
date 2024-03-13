@@ -5,7 +5,6 @@
 //  Created by maha on 11/03/2024.
 //
 
-
 import UIKit
 import SnapKit
 import Kingfisher
@@ -57,8 +56,8 @@ class ProfileViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "User Profile"
         view.backgroundColor = UIColor(red: 240/255, green: 240/255, blue: 240/255, alpha: 1.0)
+        navigationItem.largeTitleDisplayMode = .never
         
         // Add UI elements to the view
         view.addSubview(profileImageView)
@@ -77,9 +76,10 @@ class ProfileViewController: UIViewController {
         profileImageView.image = UIImage(named: "profile")
         
         // Set text for labels
-        usernameLabel.text = user?.username ?? "Maha "
-        emailLabel.text = user?.email ?? "mahaa@gmail.com"
-        
+        usernameLabel.text = user?.username ?? "Maha"
+        emailLabel.text = user?.email ?? "mahaaawadh1@gmail.com"
+        genderLabel.text = user?.gender ?? "Female"
+        phoneLabel.text = user?.phoneNumber ?? "98977543"
     }
     
     private func setupLayout() {
@@ -112,9 +112,6 @@ class ProfileViewController: UIViewController {
     
     func showuserDetails(for user: User) {
         self.user = user
-      
         setupViews()
     }
 }
-
-
