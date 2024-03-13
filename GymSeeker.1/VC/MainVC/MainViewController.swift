@@ -24,7 +24,7 @@ class MainViewController: UIViewController {
 
     private let bankLogoImageView: UIImageView = {
         let imageView = UIImageView()
-        imageView.image = UIImage(named: "gym") // Replace "gym" with the name of your image asset
+        imageView.image = UIImage(named: "app_logo") // Replace "gym" with the name of your image asset
         imageView.contentMode = .scaleAspectFit
         return imageView
     }()
@@ -66,21 +66,45 @@ class MainViewController: UIViewController {
         view.addSubview(signInContainerView)
         view.addSubview(bottomImageView) // Add bottomImageView
 
+        let buttonHeight: CGFloat = 60 // Define button height
+        let cornerRadius: CGFloat = 20 // Define corner radius
+
         let createAccountButton = UIButton()
         createAccountButton.setTitle("Sign Up", for: .normal)
+        createAccountButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 20)
+        createAccountButton.layer.cornerRadius = 25
+        //createAccountButton.layer.borderWidth = 2
+        //createAccountButton.layer.borderColor = #colorLiteral(red: 0.9254902005, green: 0.2352941185, blue: 0.1019607857, alpha: 1)
+        createAccountButton.backgroundColor = UIColor.orange
+        createAccountButton.tintColor = .white
+        //createAccountButton.backgroundColor = .white
+        createAccountButton.setImage(UIImage(systemName: "person.crop.circle.badge.plus"), for: .normal)
+        createAccountButton.layer.shadowColor = UIColor.black.cgColor
+        createAccountButton.layer.shadowOpacity = 0.5
+        createAccountButton.layer.shadowOffset = CGSize(width: 0, height: 3)
+        createAccountButton.layer.shadowRadius = 3
+        createAccountButton.imageEdgeInsets = UIEdgeInsets(top: 0, left: -10, bottom: 0, right: 0)
         createAccountButton.setTitleColor(.white, for: .normal)
-        createAccountButton.backgroundColor = .gray // Set background color
-        createAccountButton.layer.cornerRadius = 9 // Optional: Add corner radius for rounded appearance
         createAccountButton.addTarget(self, action: #selector(createAccountButtonTapped), for: .touchUpInside)
         createAccountContainerView.addSubview(createAccountButton)
 
-        let signInButton = UIButton()
-        signInButton.setTitle("Log In", for: .normal)
-        signInButton.setTitleColor(.white, for: .normal)
-        signInButton.backgroundColor = .gray // Set background color
-        signInButton.layer.cornerRadius = 9 // Optional: Add corner radius for rounded appearance
-        signInButton.addTarget(self, action: #selector(signInButtonTapped), for: .touchUpInside)
-        signInContainerView.addSubview(signInButton)
+let signInButton = UIButton()
+     signInButton.addTarget(self, action: #selector(signInButtonTapped), for: .touchUpInside)
+       signInContainerView.addSubview(signInButton)
+        signInButton.setTitle("Login", for: .normal)
+        signInButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 20)
+        signInButton.layer.cornerRadius = 25
+        //signInButton.layer.borderWidth = 2
+        //signInButton.layer.borderColor = #colorLiteral(red: 0.9372549057, green: 0.3490196168, blue: 0.1921568662, alpha: 1)
+        signInButton.tintColor = .white
+        signInButton.layer.shadowColor = UIColor.black.cgColor
+        signInButton.layer.shadowOpacity = 0.5
+        signInButton.layer.shadowOffset = CGSize(width: 0, height: 3)
+        signInButton.layer.shadowRadius = 3
+        signInButton.imageEdgeInsets = UIEdgeInsets(top: 0, left: -10, bottom: 0, right: 0)
+        signInButton.backgroundColor = UIColor.orange
+        signInButton.setImage(UIImage(systemName: "lock.open.fill"), for: .normal)
+        signInButton.imageEdgeInsets = UIEdgeInsets(top: 0, left: -10, bottom: 0, right: 0)
 
         titleLabel.snp.makeConstraints { make in
             make.centerX.equalToSuperview()
@@ -99,29 +123,36 @@ class MainViewController: UIViewController {
             make.centerX.equalToSuperview()
             make.centerY.equalToSuperview() // Center vertically
             make.width.equalToSuperview().offset(-40)
-            make.height.equalTo(50)
+            make.height.equalTo(buttonHeight) // Set button height
         }
 
         signInContainerView.snp.makeConstraints { make in
             make.centerX.equalToSuperview()
             make.top.equalTo(createAccountContainerView.snp.bottom).offset(20) // Add spacing between createAccountContainerView and signInContainerView
             make.width.equalToSuperview().offset(-40)
-            make.height.equalTo(50)
+            make.height.equalTo(buttonHeight) // Set button height
         }
 
         createAccountButton.snp.makeConstraints { make in
-            make.edges.equalToSuperview().inset(UIEdgeInsets(top: 5, left: 10, bottom: 5, right: 10))
+            make.centerX.equalToSuperview()
+                        make.centerY.equalToSuperview()
+                        make.width.equalTo(230)
+                        make.height.equalTo(50)       
         }
 
         signInButton.snp.makeConstraints { make in
-            make.edges.equalToSuperview().inset(UIEdgeInsets(top: 5, left: 10, bottom: 5, right: 10))
+
+            make.centerX.equalToSuperview()
+                        make.centerY.equalToSuperview()
+                        make.width.equalTo(230)
+                        make.height.equalTo(50)
         }
 
         bottomImageView.snp.makeConstraints { make in
             make.centerX.equalToSuperview()
-            make.bottom.equalToSuperview().offset(-20) // Adjust the vertical position as needed
-            make.width.equalTo(900) // Set the width of the image view
-            make.height.equalTo(160) // Set the height of the image view
+            make.bottom.equalToSuperview().offset(-20)
+            make.width.equalTo(900)
+            make.height.equalTo(160)
         }
     }
 

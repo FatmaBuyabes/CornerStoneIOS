@@ -13,7 +13,7 @@ class DetailScreenViewController: UIViewController {
     
     lazy var imageView: UIImageView = {
         let imageView = UIImageView()
-        imageView.image = UIImage(named: "gym")
+        imageView.image = UIImage(named: "app_logo")
         imageView.contentMode = .scaleAspectFill
         imageView.clipsToBounds = true
         imageView.layer.cornerRadius = 10
@@ -60,7 +60,7 @@ class DetailScreenViewController: UIViewController {
     lazy var button: UIButton = {
         let button = UIButton()
         button.setTitle("One Day/Pass 10 KD", for: .normal)
-        button.backgroundColor = UIColor(red: 52/255, green: 152/255, blue: 219/255, alpha: 1.0)
+        button.backgroundColor = .orange
         button.layer.cornerRadius = 8
         button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 18)
         button.addTarget(self, action: #selector(buttonTapped), for: .touchUpInside)
@@ -129,37 +129,12 @@ class DetailScreenViewController: UIViewController {
     }
     
     @objc func buttonTapped() {
-        print("Button tapped")
+        let alert = UIAlertController(title: "Confirmation", message: "Are you sure you want to purchase One Day Pass for 10 KD?", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+        alert.addAction(UIAlertAction(title: "Confirm", style: .default, handler: { _ in
+            // Place the logic for handling the button action here
+            print("Purchase confirmed")
+        }))
+        present(alert, animated: true, completion: nil)
     }
 }
-
-#if canImport(SwiftUI) && DEBUG
-struct ExampleViewControllerPreview: PreviewProvider {
-    static var previews: some View {
-        GenericViewControllerRepresentable(DetailScreenViewController())
-    }
-}
-#endif
-
-
-
-
-#if canImport(SwiftUI) && DEBUG
-import SwiftUI
-
-struct GenericViewControllerRepresentable<ViewController: UIViewController>: UIViewControllerRepresentable {
-    
-    let viewController: ViewController
-    
-    init(_ builder: @autoclosure @escaping () -> ViewController) {
-        self.viewController = builder()
-    }
-    
-    func makeUIViewController(context: Context) -> ViewController {
-        viewController
-    }
-    
-    func updateUIViewController(_ uiViewController: ViewController, context: Context) {
-    }
-}
-#endif

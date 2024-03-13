@@ -76,7 +76,7 @@ class LoginUiViewController: UIViewController {
         loginButton = UIButton(type: .system)
         loginButton.setTitle("Log In", for: .normal)
         loginButton.setTitleColor(.white, for: .normal)
-        loginButton.backgroundColor = UIColor.systemBlue.withAlphaComponent(0.9)
+        loginButton.backgroundColor = .orange
         loginButton.layer.cornerRadius = 8
         loginButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 18)
         loginButton.addTarget(self, action: #selector(loginButtonTapped), for: .touchUpInside)
@@ -145,7 +145,7 @@ class LoginUiViewController: UIViewController {
         
         NetworkManager.shared.signin(user: user) { result in
             switch result {
-            case .success(let tokenResponse):
+            case .success(_):
                 print("Login successful")
                 
                 //Safeyah
@@ -187,7 +187,7 @@ class LoginUiViewController: UIViewController {
             target: self,
             action: #selector(navIns)
         )
-        navigationItem.rightBarButtonItem?.tintColor = UIColor.systemBlue
+        navigationItem.rightBarButtonItem?.tintColor = UIColor.darkGray
         
     }
     

@@ -102,7 +102,7 @@ class SignUpUIViewController: UIViewController {
         signUpButton = UIButton(type: .system)
         signUpButton.setTitle("Sign Up", for: .normal)
         signUpButton.setTitleColor(.white, for: .normal)
-        signUpButton.backgroundColor = UIColor.systemBlue.withAlphaComponent(0.9)
+        signUpButton.backgroundColor = .orange
         signUpButton.layer.cornerRadius = 8
         signUpButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 18)
         signUpButton.addTarget(self, action: #selector(signUpButtonTapped), for: .touchUpInside)
