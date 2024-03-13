@@ -10,6 +10,8 @@ import SnapKit
 
 class DetailScreenViewController: UIViewController {
     
+    var gym: Gym?
+    
     lazy var imageView: UIImageView = {
         let imageView = UIImageView()
         imageView.image = UIImage(named: "gym")

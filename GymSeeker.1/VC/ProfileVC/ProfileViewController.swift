@@ -57,8 +57,8 @@ class ProfileViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "User Profile"
         view.backgroundColor = UIColor(red: 240/255, green: 240/255, blue: 240/255, alpha: 1.0)
+        navigationItem.largeTitleDisplayMode = .never
         
         // Add UI elements to the view
         view.addSubview(profileImageView)
