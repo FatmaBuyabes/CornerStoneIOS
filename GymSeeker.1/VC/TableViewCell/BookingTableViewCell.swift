@@ -2,7 +2,7 @@ import UIKit
 import SnapKit
 
 class BookingTableViewCell: UITableViewCell {
-
+    
     let gymNameLabel = UILabel()
     let dateLabel = UILabel()
     let gymImage = UIImageView()
@@ -14,10 +14,11 @@ class BookingTableViewCell: UITableViewCell {
         setupViews()
         setupConstraints()
     }
-
+    
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
     
     func setupViews() {
         contentView.addSubview(gymImage)
@@ -35,11 +36,12 @@ class BookingTableViewCell: UITableViewCell {
         priceLabel.textColor = .darkGray
         
         gymImage.contentMode = .scaleAspectFill
-        gymImage.image = UIImage(named: "flare")
+        gymImage.image = UIImage(named: "Spark")
         gymImage.layer.cornerRadius = 20
         gymImage.clipsToBounds = true
         gymImage.layer.borderWidth = 1
         gymImage.layer.borderColor = UIColor.lightGray.cgColor
+        
     }
     
     func setupConstraints() {
@@ -68,8 +70,9 @@ class BookingTableViewCell: UITableViewCell {
     func configure(with booking: BookingDetails) {
         gymNameLabel.text = booking.name
         dateLabel.text = "Date: \(booking.date)"
-        priceLabel.text = "Price: \(booking.price)"
+        priceLabel.text = "Location: \(booking.location)"
         // Set placeholder image or load gym image from URL
         
     }
+    
 }

@@ -75,9 +75,8 @@ class MainViewController: UIViewController {
         createAccountButton.layer.cornerRadius = 25
         //createAccountButton.layer.borderWidth = 2
         //createAccountButton.layer.borderColor = #colorLiteral(red: 0.9254902005, green: 0.2352941185, blue: 0.1019607857, alpha: 1)
-        createAccountButton.backgroundColor = UIColor.orange
+        createAccountButton.backgroundColor = #colorLiteral(red: 0.9568627477, green: 0.6588235497, blue: 0.5450980663, alpha: 1)
         createAccountButton.tintColor = .white
-        //createAccountButton.backgroundColor = .white
         createAccountButton.setImage(UIImage(systemName: "person.crop.circle.badge.plus"), for: .normal)
         createAccountButton.layer.shadowColor = UIColor.black.cgColor
         createAccountButton.layer.shadowOpacity = 0.5
@@ -102,7 +101,7 @@ let signInButton = UIButton()
         signInButton.layer.shadowOffset = CGSize(width: 0, height: 3)
         signInButton.layer.shadowRadius = 3
         signInButton.imageEdgeInsets = UIEdgeInsets(top: 0, left: -10, bottom: 0, right: 0)
-        signInButton.backgroundColor = UIColor.orange
+        signInButton.backgroundColor = #colorLiteral(red: 0.9568627477, green: 0.6588235497, blue: 0.5450980663, alpha: 1)
         signInButton.setImage(UIImage(systemName: "lock.open.fill"), for: .normal)
         signInButton.imageEdgeInsets = UIEdgeInsets(top: 0, left: -10, bottom: 0, right: 0)
 

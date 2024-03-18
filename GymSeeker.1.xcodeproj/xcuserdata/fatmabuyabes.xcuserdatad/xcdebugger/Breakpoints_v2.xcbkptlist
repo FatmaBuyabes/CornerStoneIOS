@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "6971D748-8E45-4E7F-8FA8-695A37426280"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "7F7F1073-F716-4428-9D10-6312E07A331B"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GymSeeker.1/Network/NetworkManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "67"
+            endingLineNumber = "67"
+            landmarkName = "fetchAllGym(token:completion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "7F7F1073-F716-4428-9D10-6312E07A331B - db4be6d3ed9854cc"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "GymSeeker_1.NetworkManager.fetchAllGym(token: Swift.String, completion: (Swift.Result&lt;GymSeeker_1.Gym, Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "GymSeeker.1"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/fatmabuyabes/Desktop/CornerStoneIOS/GymSeeker.1/Network/NetworkManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "68"
+                  endingLineNumber = "68"
+                  offsetFromSymbolStart = "356">
+               </Location>
+               <Location
+                  uuid = "7F7F1073-F716-4428-9D10-6312E07A331B - 4f71a5fc15a5ec79"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Alamofire.DataResponse&lt;GymSeeker_1.Gym, Alamofire.AFError&gt;) -&gt; () in GymSeeker_1.NetworkManager.fetchAllGym(token: Swift.String, completion: (Swift.Result&lt;GymSeeker_1.Gym, Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "GymSeeker.1"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/fatmabuyabes/Desktop/CornerStoneIOS/GymSeeker.1/Network/NetworkManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "69"
+                  endingLineNumber = "69"
+                  offsetFromSymbolStart = "260">
+               </Location>
+               <Location
+                  uuid = "7F7F1073-F716-4428-9D10-6312E07A331B - 4f71a5fc15a5edbb"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Alamofire.DataResponse&lt;GymSeeker_1.Gym, Alamofire.AFError&gt;) -&gt; () in GymSeeker_1.NetworkManager.fetchAllGym(token: Swift.String, completion: (Swift.Result&lt;GymSeeker_1.Gym, Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "GymSeeker.1"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/fatmabuyabes/Desktop/CornerStoneIOS/GymSeeker.1/Network/NetworkManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "67"
+                  endingLineNumber = "67"
+                  offsetFromSymbolStart = "216">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "04DDFF40-D1B3-42C3-B295-83B4B78960E8"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GymSeeker.1/Network/NetworkManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "66"
+            endingLineNumber = "66"
+            landmarkName = "fetchAllGym(token:completion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "04DDFF40-D1B3-42C3-B295-83B4B78960E8 - db4be6d3ed985492"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "GymSeeker_1.NetworkManager.fetchAllGym(token: Swift.String, completion: (Swift.Result&lt;GymSeeker_1.Gym, Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "GymSeeker.1"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/fatmabuyabes/Desktop/CornerStoneIOS/GymSeeker.1/Network/NetworkManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "66"
+                  endingLineNumber = "66"
+                  offsetFromSymbolStart = "228">
+               </Location>
+               <Location
+                  uuid = "04DDFF40-D1B3-42C3-B295-83B4B78960E8 - db4be6d3ed985492"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "GymSeeker_1.NetworkManager.fetchAllGym(token: Swift.String, completion: (Swift.Result&lt;GymSeeker_1.Gym, Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "GymSeeker.1"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/fatmabuyabes/Desktop/CornerStoneIOS/GymSeeker.1/Network/NetworkManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "66"
+                  endingLineNumber = "66"
+                  offsetFromSymbolStart = "364">
+               </Location>
+               <Location
+                  uuid = "04DDFF40-D1B3-42C3-B295-83B4B78960E8 - 4f71a5fc15a5edbb"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Alamofire.DataResponse&lt;GymSeeker_1.Gym, Alamofire.AFError&gt;) -&gt; () in GymSeeker_1.NetworkManager.fetchAllGym(token: Swift.String, completion: (Swift.Result&lt;GymSeeker_1.Gym, Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "GymSeeker.1"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/fatmabuyabes/Desktop/CornerStoneIOS/GymSeeker.1/Network/NetworkManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "67"
+                  endingLineNumber = "67"
+                  offsetFromSymbolStart = "216">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

@@ -12,6 +12,7 @@ struct User: Codable {
     let phoneNumber: String?
     let gender: String?
     let password: String
+    let token: String?
     //id from back??
 }
 
