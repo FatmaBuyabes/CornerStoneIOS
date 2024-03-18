@@ -9,8 +9,7 @@ import Foundation
 struct BookingDetails: Codable {
     var date: String
     var name: String
-    var price: String  // do i create variable for user id or price it will come from gym page
+    var location: String  // do i create variable for user id or price it will come from gym page
+    // var id ?? 
     
-    //var id: Int64 why?? gym id 
-
 }

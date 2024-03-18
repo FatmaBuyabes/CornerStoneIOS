@@ -14,8 +14,7 @@ import Kingfisher
 class BookingTableViewController: UITableViewController {
     var token: String?
     var bookings: [BookingDetails] = [
-        BookingDetails(date: "10-4-2023", name: "Peak", price: "10KD"),
-        BookingDetails(date: "10-1-2023", name: "Spark", price: "10KD")]
+        BookingDetails(date: "10-1-2023", name: "Spark", location: "Kuwait City")]
         
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,6 +46,21 @@ class BookingTableViewController: UITableViewController {
                 cell.configure(with: booking)
                 return cell
     }
+    
+//    func bookGym() {
+//        guard let token = token else {
+//            return
+//        }
+//
+//        NetworkManager.shared.bookGym(token: token) { fetchedBookings in
+//            DispatchQueue.main.async {
+//                // Assuming you have instance variables for bookings and tableView
+//                self.bookings = fetchedBookings ?? []
+//                self.tableView.reloadData()
+//            }
+//        }
+//    }
+
 
     /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

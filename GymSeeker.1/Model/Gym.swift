@@ -7,10 +7,38 @@
 
 import Foundation
 struct Gym: Codable {
-    var gymName: String
+//    var id: Int
+//    var name: String
+//    var location: String
+//    var workingHours: String
+//    var price: String
+//    var image: String
+//    var gender: String
+    
+    var id: Int
+    var name: String
     var location: String
     var workingHours: String
-    var price: String
-    //var id: Int64 why?? from back or front
+    var gender: String
 
 }
+
+struct Gym2: Codable {
+    var id: Int
+    var name: String
+    var location: String
+    var workingHours: String
+//    var price: String
+//    var image: String
+    var gender: String
+
+}
+
+
+
+//
+//"id": 2,
+//       "name": "Peak",
+//       "location": "Alshaheed Park",
+//       "workingHours": "6:00AM - 12:00AM",
+//       "gender": "female"

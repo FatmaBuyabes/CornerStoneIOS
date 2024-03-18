@@ -102,11 +102,15 @@ class SignUpUIViewController: UIViewController {
         signUpButton = UIButton(type: .system)
         signUpButton.setTitle("Sign Up", for: .normal)
         signUpButton.setTitleColor(.white, for: .normal)
-        signUpButton.backgroundColor = .orange
-        signUpButton.layer.cornerRadius = 8
+        signUpButton.backgroundColor =  #colorLiteral(red: 0.9568627477, green: 0.6588235497, blue: 0.5450980663, alpha: 1)
+        signUpButton.layer.cornerRadius = 25
         signUpButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 18)
         signUpButton.addTarget(self, action: #selector(signUpButtonTapped), for: .touchUpInside)
         view.addSubview(signUpButton)
+        signUpButton.layer.shadowColor = UIColor.black.cgColor
+            signUpButton.layer.shadowOffset = CGSize(width: 0, height: 2)
+            signUpButton.layer.shadowOpacity = 0.5
+            signUpButton.layer.shadowRadius = 4
     }
 
         // MARK: - Constraints Setup
@@ -162,8 +166,8 @@ class SignUpUIViewController: UIViewController {
         
         // Example constraints for sign-up button
         signUpButton.snp.makeConstraints { make in
-            make.top.equalTo(genderSegmentedControl.snp.bottom).offset(20)
-            make.leading.trailing.equalToSuperview().inset(20)
+            make.top.equalTo(genderSegmentedControl.snp.bottom).offset(60)
+            make.leading.trailing.equalToSuperview().inset(80)
             make.height.equalTo(50)
             
         }
@@ -190,11 +194,11 @@ class SignUpUIViewController: UIViewController {
         }
 
         let genderIndex = genderSegmentedControl.selectedSegmentIndex
-        let gender = genderIndex == 0 ? "Female" : "Male" // Map segmented control index to gender string
+        let gender = genderIndex == 0 ? "female" : "male" // Map segmented control index to gender string
 
         // Optionally validate other fields like phone number here
 
-        let user = User(username: username, email: email, phoneNumber: phoneTextField.text, gender: gender, password: password)
+        let user = User(username: username, email: email, phoneNumber: phoneTextField.text, gender: gender, password: password, token: nil)
 
         NetworkManager.shared.signup(user: user) { [weak self] result in
             switch result {
@@ -203,17 +207,28 @@ class SignUpUIViewController: UIViewController {
                 // Optionally perform any action upon successful signup, like navigating to the main screen
                 DispatchQueue.main.async {
                     // Example: Navigate to the main screen
-                    let mainVC = MainViewController()
+                    let mainVC = LoginUiViewController()
                     mainVC.token = tokenResponse.token
                     mainVC.user = user
                     self?.navigationController?.pushViewController(mainVC, animated: true)
+                    // Show popover message
+                    self?.showPopoverMessage(message: "Signup successful!")
                 }
             case .failure(let error):
                 print("Signup failed. Error: \(error.localizedDescription)")
                 // Optionally handle failure, such as displaying an error message
                 DispatchQueue.main.async {
-                    self?.presentAlertWithTitle(title: "Error", message: "Sign up failed. Please try again.")
+                    self?.presentAlertWithTitle(title: "Error", message: "Please try again. This Profile may already Exist")
                 }
+            }
+        }
+    }
+
+    private func showPopoverMessage(message: String) {
+        let alert = UIAlertController(title: nil, message: message, preferredStyle: .actionSheet)
+        present(alert, animated: true) {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
+                alert.dismiss(animated: true, completion: nil)
             }
         }
     }

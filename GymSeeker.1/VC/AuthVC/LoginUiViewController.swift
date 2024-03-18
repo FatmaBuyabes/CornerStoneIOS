@@ -10,16 +10,21 @@ import Foundation
 import SnapKit
 
 class LoginUiViewController: UIViewController {
+    var token: String?
+    var user: User?
+    var gym: Gym?
     
     // MARK: - Properties
-    var backgroundImageView: UIImageView!
-    var usernameTextField: UITextField!
-    var passwordTextField: UITextField!
-    var blurEffectView: UIVisualEffectView!
-    var loginButton: UIButton!
-    var usernameLabel: UILabel!
-    var passwordLabel: UILabel!
-    let signUpLabel = UILabel()
+        var imageView: UIImageView! // Add this line
+        var imageView2: UIImageView!
+       var usernameTextField: UITextField!
+       var passwordTextField: UITextField!
+       var blurEffectView: UIVisualEffectView!
+       var loginButton: UIButton!
+       var usernameLabel: UILabel!
+       var passwordLabel: UILabel!
+       let signUpLabel = UILabel()
+    
     
     // MARK: - View Lifecycle
     
@@ -29,7 +34,7 @@ class LoginUiViewController: UIViewController {
         title = "Log In"
         setupUI()
         setUpLayout()
-        setUpNavigationBar()
+        //setUpNavigationBar()
         setupNavBar()
         
         //setupBackground()
@@ -76,50 +81,87 @@ class LoginUiViewController: UIViewController {
         loginButton = UIButton(type: .system)
         loginButton.setTitle("Log In", for: .normal)
         loginButton.setTitleColor(.white, for: .normal)
-        loginButton.backgroundColor = .orange
-        loginButton.layer.cornerRadius = 8
+        loginButton.backgroundColor = #colorLiteral(red: 0.9568627477, green: 0.6588235497, blue: 0.5450980663, alpha: 1)
+        loginButton.layer.cornerRadius = 25
         loginButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 18)
         loginButton.addTarget(self, action: #selector(loginButtonTapped), for: .touchUpInside)
         view.addSubview(loginButton)
+        loginButton.layer.shadowColor = UIColor.black.cgColor
+        loginButton.layer.shadowOffset = CGSize(width: 0, height: 2)
+        loginButton.layer.shadowOpacity = 0.5
+        loginButton.layer.shadowRadius = 4
+        
+        imageView = UIImageView()
+        imageView.image = UIImage(named: "logo")
+        imageView.contentMode = .scaleAspectFit
+        imageView.clipsToBounds = true
+        view.addSubview(imageView)
+        
+//        imageView2 = UIImageView()
+//        imageView2.image = UIImage(named: "gym2") // Set your image name here
+//        imageView2.contentMode = .fit
+//        imageView2.clipsToBounds = true
+//        view.addSubview(imageView2)
     }
-    func setUpLayout(){
-        usernameLabel.snp.makeConstraints { make in
-            make.top.equalTo(view.safeAreaLayoutGuide).offset(50)
-            make.leading.equalToSuperview().offset(30)
+    func setUpLayout() {
+        
+        imageView.snp.makeConstraints { make in
+            make.top.equalTo(view.safeAreaLayoutGuide.snp.top).offset(-50) // Adjust the top spacing as needed
+            make.centerX.equalToSuperview()
+            make.width.equalToSuperview().multipliedBy(0.8)
+            make.height.equalTo(imageView.snp.width)
         }
-        
-        
+
+        // Username Label
+        usernameLabel.snp.makeConstraints { make in
+            make.top.equalTo(imageView.snp.bottom).offset(-20) // Reduce the spacing here
+            make.leading.equalToSuperview().offset(50)
+        }
+
+        // Username Text Field
         usernameTextField.snp.makeConstraints { make in
-            make.top.equalTo(usernameLabel.snp.bottom).offset(8)
-            make.leading.equalToSuperview().offset(30)
-            make.trailing.equalToSuperview().offset(-30)
+            make.top.equalTo(usernameLabel.snp.bottom).offset(20)
+            make.leading.equalToSuperview().offset(50) // Adjust the leading constraint
+            make.trailing.equalToSuperview().offset(-80) // Adjust the trailing constraint
             make.height.equalTo(40)
         }
-        
-        
+
+        // Password Label
         passwordLabel.snp.makeConstraints { make in
             make.top.equalTo(usernameTextField.snp.bottom).offset(20)
-            make.leading.equalToSuperview().offset(30)
+            make.leading.equalToSuperview().offset(50)
         }
-        
-        
+
+        // Password Text Field
         passwordTextField.snp.makeConstraints { make in
             make.top.equalTo(passwordLabel.snp.bottom).offset(8)
             make.leading.trailing.height.equalTo(usernameTextField)
         }
-        
+
+        // Login Button
         loginButton.snp.makeConstraints { make in
             make.top.equalTo(passwordTextField.snp.bottom).offset(20)
             make.leading.trailing.equalTo(usernameTextField)
             make.height.equalTo(50)
         }
-        
+
+        // Sign Up Label
         signUpLabel.snp.makeConstraints { make in
             make.top.equalTo(loginButton.snp.bottom).offset(20)
             make.centerX.equalToSuperview()
         }
         
+//        imageView2.snp.makeConstraints { make in
+//                    make.bottom.equalToSuperview().offset(40) // Adjust the bottom spacing as needed
+//                    make.centerX.equalToSuperview()
+//                    make.width.equalToSuperview().multipliedBy(0.8) // Adjust the width as needed
+//                    make.height.equalTo(imageView2.snp.width) // Maintain aspect ratio
+//                }
     }
+
+
+
+
     @objc func signUpLabelTapped() {
         // Navigate to the sign-up screen
         let signUpVC = SignUpUIViewController()
@@ -141,11 +183,14 @@ class LoginUiViewController: UIViewController {
             return
         }
         
-        let user = User(username: username, email: nil,  phoneNumber: nil, gender: nil, password: password)
+        let user = User(username: username, email: nil,  phoneNumber: nil, gender: nil, password: password, token: nil)
         
+        print("Username \(username)")
+        print("password \(password)")
+
         NetworkManager.shared.signin(user: user) { result in
             switch result {
-            case .success(_):
+            case .success(let tokenResponse):
                 print("Login successful")
                 
                 //Safeyah
@@ -154,21 +199,27 @@ class LoginUiViewController: UIViewController {
                 //                    gymVC.user = user
                 let TabBarVC = TabBarViewController()
                 TabBarVC.user = user
+                
+                //MARK: USER DEFAULT
+                let userDefault = UserDefaults.standard
+                userDefault.set(tokenResponse.token, forKey: "AuthToken")
+                
                 ////                    TabBarVC.token = tokenResponse.token // You can also pass the token to other view controllers if needed
                 self.navigationController?.pushViewController(TabBarVC, animated: true)
 
             case .failure(let error):
+                
                 print("Login failed: \(error.localizedDescription)")
                 self.presentAlertWithTitle(title: "Error", message: "Invalid username or password")
             }
         }
     }
     
-    func setUpNavigationBar(){
-        let appearance = UINavigationBarAppearance()
-        appearance.configureWithOpaqueBackground()
-        navigationController?.navigationBar.scrollEdgeAppearance = appearance
-    }
+//    func setUpNavigationBar(){
+//        let appearance = UINavigationBarAppearance()
+//        appearance.configureWithOpaqueBackground()
+//        navigationController?.navigationBar.scrollEdgeAppearance = appearance
+//    }
     
     
     
